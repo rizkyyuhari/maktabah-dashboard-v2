@@ -160,22 +160,20 @@ const AddBookContentPage = () => {
           <div style={{ color: "red" }}>{errors.idBook}</div>
         </Form.Group>
 
-        {forms.idBook !== null || forms.idBook.length > 0 && (
-          <Form.Group>
-            <Form.Label>Table Of Content</Form.Label>
-            <Form.Select
-              onChange={(e) => {
-                setPage(parseInt(e.target.value));
-              }}
-            >
-              <option value="">Pilih salah satu</option>
-              <option value="">lainya</option>
-              {tableofContent.map((tbl) => (
-                <option value={tbl.page}>{tbl.text}</option>
-              ))}
-            </Form.Select>
-          </Form.Group>
-        )}
+        <Form.Group>
+          <Form.Label>Table Of Content</Form.Label>
+          <Form.Select
+            onChange={(e) => {
+              setPage(parseInt(e.target.value));
+            }}
+          >
+            <option value="">Pilih salah satu</option>
+            <option value="">lainya</option>
+            {tableofContent.map((tbl) => (
+              <option value={tbl.page}>{tbl.text}</option>
+            ))}
+          </Form.Select>
+        </Form.Group>
 
         <Form.Group className="mb-3">
           <Form.Label>Page</Form.Label>
