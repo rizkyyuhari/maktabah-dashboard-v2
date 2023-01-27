@@ -24,6 +24,7 @@ const AddBookContentPage = () => {
   const [page, setPage] = useState(0);
   const [content, setContent] = useState("");
   const [tableofContent, setTblOfContent] = useState([]);
+  const [disa, setDisa] = useState(true);
   const onTextEditorChange = (e) => {
     setContent(e);
   };
@@ -164,11 +165,16 @@ const AddBookContentPage = () => {
           <Form.Label>Table Of Content</Form.Label>
           <Form.Select
             onChange={(e) => {
-              setPage(parseInt(e.target.value));
+              if (e.target.value === "false") {
+                setDisa(false);
+              } else {
+                setPage(parseInt(e.target.value));
+                setDisa(true);
+              }
             }}
           >
             <option value="">Pilih salah satu</option>
-            <option value="">lainya</option>
+            <option value="false">lainya</option>
             {tableofContent.map((tbl) => (
               <option value={tbl.page}>{tbl.text}</option>
             ))}
@@ -178,7 +184,7 @@ const AddBookContentPage = () => {
         <Form.Group className="mb-3">
           <Form.Label>Page</Form.Label>
           <Form.Control
-            disabled
+            disabled={disa === true ? true : false}
             type="number"
             min="0"
             value={page}
