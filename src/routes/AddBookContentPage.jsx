@@ -160,7 +160,7 @@ const AddBookContentPage = () => {
           <div style={{ color: "red" }}>{errors.idBook}</div>
         </Form.Group>
 
-        {tableofContent.length > 0 && (
+        {forms.idBook.length > 0 && (
           <Form.Group>
             <Form.Label>Table Of Content</Form.Label>
             <Form.Select
@@ -169,6 +169,7 @@ const AddBookContentPage = () => {
               }}
             >
               <option value="">Pilih salah satu</option>
+              <option value="">lainya</option>
               {tableofContent.map((tbl) => (
                 <option value={tbl.page}>{tbl.text}</option>
               ))}
