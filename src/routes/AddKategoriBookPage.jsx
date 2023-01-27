@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { BookContext } from "../components/context/BookContext";
 import { addCategories } from "../network/lib/book-endpoint";
@@ -8,6 +9,7 @@ const AddKategoriBookPage = () => {
   const [form, setForm] = useState({ category_name: "" });
   const [errors, setErrors] = useState({});
   const { setTrigger } = useContext(BookContext);
+  const navigate = useNavigate();
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -53,7 +55,7 @@ const AddKategoriBookPage = () => {
             text: response.data.message,
           });
           setTrigger(response);
-          setForm({ category_name: "" });
+          navigate("/");
         } catch (error) {
           Swal.fire({
             icon: "error",
