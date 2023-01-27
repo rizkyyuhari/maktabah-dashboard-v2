@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.mainn {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  height: 100vh;
+}
+
+.form:focus {
+  box-shadow: 0 0 0 0.2rem rgba(5, 150, 105, 0.25);
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}
+
+.sub-bab {
+  margin-left: 50px
+}

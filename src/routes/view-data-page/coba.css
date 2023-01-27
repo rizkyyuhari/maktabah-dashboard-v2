@@ -1,0 +1,76 @@
+.pagination>li>a {
+    background-color: white;
+    color: #5A4181;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination>.active>a {
+    color: white;
+    background-color: rgb(5, 150, 105) !Important;
+    border: solid 1px rgb(5, 150, 105) !Important;
+}
+
+.pagination>.active>a:hover {
+    background-color: rgb(5, 150, 105) !Important;
+    border: solid 1px rgb(5, 150, 105);
+}
+
+
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+    text-align: center;
+}
+
+thead {
+    background-color: #435d7d;
+
+    color: white;
+}
+
+
+.red {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headabovetable {
+    background-color: #435d7d;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.title {
+    color: #f5f5f5;
+}
+
+
+/* .btn {
+    background-color: rgb(5, 150, 105);
+    border-color: rgb(5, 150, 105);
+}
+
+.btn:hover {
+    background-color: rgb(5, 150, 105);
+} */
+
+
+.red-start::after {
+    content: " *";
+    color: red;
+}
