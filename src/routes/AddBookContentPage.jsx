@@ -160,7 +160,7 @@ const AddBookContentPage = () => {
           <div style={{ color: "red" }}>{errors.idBook}</div>
         </Form.Group>
 
-        {forms.idBook.length > 0 && (
+        {forms.idBook !== null || forms.idBook.length > 0 && (
           <Form.Group>
             <Form.Label>Table Of Content</Form.Label>
             <Form.Select
