@@ -53,9 +53,12 @@ const AddKategoriBookPage = () => {
           Swal.fire({
             icon: "success",
             text: response.data.message,
+          }).then((response) => {
+            if (response.isConfirmed) {
+              navigate("/");
+            }
           });
           setTrigger(response);
-          navigate("/");
         } catch (error) {
           Swal.fire({
             icon: "error",
